@@ -10,7 +10,7 @@ pipeline{
             }
         }
         stage("upload artifactory"){
-            step{
+            steps{
                 sh 'curl -uadmin:AP43csQfawThgsFYocyVrexhQ9x -T  target/bio*.jar  "http://54.144.133.83:8081/artifactory/take32/geosolution1/bio_${BUILD_ID}.jar"'
             }
         }
